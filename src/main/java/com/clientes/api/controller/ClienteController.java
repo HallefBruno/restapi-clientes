@@ -124,7 +124,7 @@ public class ClienteController {
         return ResponseEntity.ok(pageModel);
     }
     
-    @ApiResponses(value = {@ApiResponse(responseCode = "201", description = "Salvar Cliente",content = {@Content(mediaType = "application/json", schema = @Schema(implementation = Cliente.class))})})
+    @ApiResponses(value = {@ApiResponse(responseCode = "201", description = "Salvar Cliente ",content = {@Content(mediaType = "application/json", schema = @Schema(implementation = Cliente.class))})})
     @PostMapping(consumes = {"application/json","application/xml","application/x-yaml"}, produces = {"application/json","application/xml","application/x-yaml"})
     public ResponseEntity<ClienteVO> create(@RequestBody ClienteVO produtoVO) {
         ClienteVO novo = clienteService.create(produtoVO);
@@ -132,8 +132,8 @@ public class ClienteController {
         return new ResponseEntity<>(novo, HttpStatus.CREATED);
     }
     
-    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Alterar Cliente",content = {@Content(mediaType = "application/json", schema = @Schema(implementation = Cliente.class))})})
-    @PutMapping
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Alterar Cliente ",content = {@Content(mediaType = "application/json", schema = @Schema(implementation = Cliente.class))})})
+    @PutMapping(consumes = {"application/json","application/xml","application/x-yaml"}, produces = {"application/json","application/xml","application/x-yaml"})
     public ResponseEntity<ClienteVO> update(@RequestBody ClienteVO produtoVO) {
         ClienteVO novo = clienteService.update(produtoVO);
         novo.add(link(novo.getId()));
