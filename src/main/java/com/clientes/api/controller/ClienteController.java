@@ -67,7 +67,7 @@ public class ClienteController {
         return clienteVO;
     }
     
-    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Buscar Cliente por Nome",content = {@Content(mediaType = "application/json application/xml application/x-yaml", schema = @Schema(implementation = Cliente.class))})})
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Buscar Cliente por Nome",content = {@Content(mediaType = "application/json", schema = @Schema(implementation = Cliente.class))})})
     @GetMapping(value = "buscar/porNome/{nome}", produces = {"application/json","application/xml","application/x-yaml"})
     public ResponseEntity<?> findByNome(@PathVariable("nome") String nome, 
         @RequestParam(value = "page", defaultValue = "0") int page,
