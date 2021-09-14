@@ -19,4 +19,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Spring](https://start.spring.io/)
 	
 ### Teste Online
-- [Pode ser feito aqui](http://eleicaoptep.herokuapp.com/ptepeleicoes/)
+- [Pode ser feito aqui](https://restapi-clientes.herokuapp.com/auth/swagger-ui-custom.html)
